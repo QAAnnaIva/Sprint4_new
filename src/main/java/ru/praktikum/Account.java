@@ -8,13 +8,15 @@ public class Account {
         this.name = name;
     }
 
+
+
     public boolean checkNameToEmboss() {
         /*
              Этот метод должен проверять, что сохранённая через конструктор строка соответствует требованиям.
              Если строка удовлетворяет условиям, метод возвращает true, иначе — false.
          */
 
-
+try {
         String trimmedName = name.trim();
 
         if (trimmedName.length() >= 3 && trimmedName.length() <= 19) {
@@ -33,7 +35,11 @@ public class Account {
 
         }
 
+        return false;
 
+    }
+       catch (NullPointerException e){
+}
         return false;
     }
 }
